@@ -3,5 +3,13 @@ The repository contains all files used to calcuate the optimal the energy thresh
 
 <img width="544" alt="image" src="https://github.com/izsneha2004/GammaBackground_Iffat/assets/125691055/8a222b02-b2ba-4cee-9745-30a6b8c09fc8">
 
+The steps for the process include:
+1. Simulate gamma and muons data with CUORE’s simulations software with on-site conditions.
+2. Use the system response of the detector to smear the simulated data so that it better resembles the on-site detector output. 
+3. Draw a cumulative counts curve with varying energy thresholds.
+4. Find optimal energy to minimize gamma count, while maximizing muon count. 
+
+For the second step, the system response that Din-Ammar Tolj created in the summer of 2023 is used. The process is 
+
 
 

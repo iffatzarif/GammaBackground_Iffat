@@ -9,7 +9,18 @@ The steps for the process include:
 3. Draw a cumulative counts curve with varying energy thresholds.
 4. Find optimal energy to minimize gamma count, while maximizing muon count. 
 
-For the second step, the system response that Din-Ammar Tolj created in the summer of 2023 is used. The process is 
+For the second step, the system response that Din-Ammar Tolj created in the summer of 2023 is used. The original code and the description can be found here: https://github.com/sgrobnik/SmearingProjectCUORE/tree/main. The system response function smears the simulations data such that it more closely models the real data from the detector. This needs to be done because real detector data is not perfect. The signals that particles produce are modified by their interactions with the detector components and the surroundings. Thus, they produce an output distinct from the one that a simulations software would produce (which would indeed be perfect). It is impossible to make the detector signals perfect and so we modify our simulations signals to match. Different normal distribution models with different variances were tried to find the one that made the data simulated for the lab model the data detected by the panels in the lab most closely. The one that was finally used here is the linear variance model -- though more work can yet be done to improve the model. 
+
+<img width="335" alt="image" src="https://github.com/izsneha2004/GammaBackground_Iffat/assets/125691055/3d22ea9b-8494-47da-834f-b34876ef7f13"> <img width="342" alt="image" src="https://github.com/izsneha2004/GammaBackground_Iffat/assets/125691055/8ed9d29c-a7e4-4034-9e93-88c87b8c1199">
+
+The cumulative counts curve that the third step speaks of is plotting the cumulative gamma counts below the threshold along with the cumulative muon counts above the threshold 
+as they are both quantites we are trying to minimize. The graph for LNGS simulations (system response was found using lab data but we are ultimately trying to use on-site data to find the energy threshold that is applicable to the muon panels in their final location) is shown below: 
+
+<img width="572" alt="image" src="https://github.com/izsneha2004/GammaBackground_Iffat/assets/125691055/e1fa8552-2ca6-4342-8a3a-2caecbff440e">
+
+The point in the graph at which both the plotted quantitues maximize is our desired energy threshold. 
+
+
 
 
 

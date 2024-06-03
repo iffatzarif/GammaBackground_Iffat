@@ -3,13 +3,16 @@ The repository contains all files used to calcuate the optimal the energy thresh
 
 <img width="544" alt="image" src="https://github.com/izsneha2004/GammaBackground_Iffat/assets/125691055/8a222b02-b2ba-4cee-9745-30a6b8c09fc8">
 
+The process is carried out in the jupyter notebook titled "GammaBackgroundElimination-Python". The notebook uses python, though some priliminary work had been done in ROOT and this is included as well in the notebook titled "GammaBackgroundElimination-ROOT".  
+
 The steps for the process include:
 1. Simulate gamma and muons data with CUORE’s simulations software with on-site conditions.
-2. Use the system response of the detector to smear the simulated data so that it better resembles the on-site detector output. 
-3. Draw a cumulative counts curve with varying energy thresholds.
-4. Find optimal energy to minimize gamma count, while maximizing muon count. 
+2. Use the system response of the detector to smear the simulated data so that it better resembles the on-site detector output.
+3. Normalize the resultant data 
+4. Draw a cumulative counts curve with varying energy thresholds.
+5. Find optimal energy to minimize gamma count, while maximizing muon count. 
 
-For the second step, the system response that Din-Ammar Tolj created in the summer of 2023 is used. The original code and the description can be found here: https://github.com/sgrobnik/SmearingProjectCUORE/tree/main. The system response function smears the simulations data such that it more closely models the real data from the detector. This needs to be done because real detector data is not perfect. The signals that particles produce are modified by their interactions with the detector components and the surroundings. Thus, they produce an output distinct from the one that a simulations software would produce (which would indeed be perfect). It is impossible to make the detector signals perfect and so we modify our simulations signals to match. Different normal distribution models with different variances were tried to find the one that made the data simulated for the lab model the data detected by the panels in the lab most closely. The one that was finally used here is the linear variance model -- though more work can yet be done to improve the model. 
+For the second step, the system response that Din-Ammar Tolj created in the summer of 2023 is used. The original code and the description can be found here: https://github.com/sgrobnik/SmearingProjectCUORE/tree/main. The system response function smears the simulations data such that it more closely models the real data from the detector. This needs to be done because real detector data is not perfect. The signals that particles produce are modified by their interactions with the detector components and the surroundings. Thus, they produce an output distinct from the one that a simulations software would produce (which would indeed be perfect). It is impossible to make the detector signals as perfect and so we modify our simulations signals to match it. Different normal distribution models with different variances were tried to find the one that made the data simulated for the lab model the data detected by the panels in the lab most closely. The one that was finally used here is the linear variance model -- though more work can yet be done to improve the model. 
 
 <img width="335" alt="image" src="https://github.com/izsneha2004/GammaBackground_Iffat/assets/125691055/3d22ea9b-8494-47da-834f-b34876ef7f13"> <img width="342" alt="image" src="https://github.com/izsneha2004/GammaBackground_Iffat/assets/125691055/8ed9d29c-a7e4-4034-9e93-88c87b8c1199">
 

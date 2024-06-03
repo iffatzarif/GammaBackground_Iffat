@@ -18,7 +18,11 @@ as they are both quantites we are trying to minimize. The graph for LNGS simulat
 
 <img width="572" alt="image" src="https://github.com/izsneha2004/GammaBackground_Iffat/assets/125691055/e1fa8552-2ca6-4342-8a3a-2caecbff440e">
 
-The point in the graph at which both the plotted quantitues maximize is our desired energy threshold. 
+The point in the graph at which both the plotted quantitues maximize is our desired energy threshold. This could be the point at which the two graphs meet but it might be possible to eliminate the gammas altogether if the trend in the graph shown holds for gammas and muons in general since the gammas quickly fall off after the meeting point while muons stay roughly the same. However, it is not known if the trend holds for all gammas and muons as the simulated sample used here is quite small and many of the bins are completely empty. Therefore, we need to run the same code on a bigger dataset. 
+
+Next Steps:
+1. Improve system response by adapting to data taken at the Laboratori Nazionali del Gran Sasso (LNGS) in Italy. 
+2. Work with simulated data with higher counts to determine a satisfactory energy threshold. 
 
 
 
